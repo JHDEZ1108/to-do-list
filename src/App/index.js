@@ -12,6 +12,7 @@ import { TodoCounter } from '../Components/TodoCounter';
 import { ChangeAlert } from '../Components/ChangeAlert';
 import { TodosLoading } from '../Components/TodosLoading';
 import { CreateTodoButton } from '../Components/CreateTodoButton';
+import { Box, Typography } from '@mui/material';
 
 function App() {
   const { state, stateUpdaters } = useTodos();
@@ -58,7 +59,12 @@ function App() {
         onLoading={() => <TodosLoading />}
         onEmptyTodos={() => <EmptyTodos />}
         onEmptySearchResults={
-          (searchText) => <p>No hay resultados para {searchText}</p>
+          (searchText) => 
+            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <Typography variant="h6" color="text.secondary">
+                No hay resultados para {searchText}
+              </Typography>
+            </Box>
         }
       >
         {todo => (
