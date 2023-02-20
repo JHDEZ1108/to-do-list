@@ -11,6 +11,8 @@ import { EmptyTodos } from '../Components/EmptyTodos';
 import { TodoCounter } from '../Components/TodoCounter';
 import { ChangeAlert } from '../Components/ChangeAlert';
 import { TodosLoading } from '../Components/TodosLoading';
+import { Navbar } from '../Components/Navbar';
+
 import { CreateTodoButton } from '../Components/CreateTodoButton';
 import { Box, Typography } from '@mui/material';
 
@@ -38,6 +40,8 @@ function App() {
   
   return (
     <React.Fragment>
+      <Navbar/>
+    
       <TodoHeader loading={loading}>
         <TodoCounter
           totalTodos={totalTodos}
@@ -90,7 +94,6 @@ function App() {
       <CreateTodoButton
         setOpenModal={setOpenModal}
       />
-
       <ChangeAlert
         sincronize={sincronizeTodos}
       />
