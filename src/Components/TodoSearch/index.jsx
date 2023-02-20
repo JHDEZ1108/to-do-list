@@ -4,7 +4,6 @@ import { styled } from '@mui/material/styles';
 
 const StyledTextField = styled(TextField)({
   width: '100%',
-  maxWidth: '600px',
   '& label.Mui-focused': {
     color: '#b0c2f2',
   },
@@ -30,7 +29,7 @@ function TodoSearch({ searchValue, setSearchValue, loading }) {
   };
 
   return (
-    <Box sx={{ maxWidth: '600px', mx: 'auto' }}>
+    <Box sx={{ maxWidth: '600px', mx: 'auto', '@media (max-width:600px)': { maxWidth: '100%' } }}>
       <StyledTextField
         variant="outlined"
         label="Buscar ToDo..."
