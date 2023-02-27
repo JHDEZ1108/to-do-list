@@ -29,7 +29,17 @@ function TodoSearch({ searchValue, setSearchValue, loading }) {
   };
 
   return (
-    <Box sx={{ maxWidth: '600px', mx: 'auto', '@media (max-width:600px)': { maxWidth: '100%' } }}>
+    <Box 
+      sx={{ 
+        maxWidth: '600px', 
+        mx: 'auto', 
+        '@media (max-width:600px)': { 
+          maxWidth: '100%',
+          px: '16px'
+        },
+        px: '32px',
+        textAlign: 'center'
+      }}>
       <StyledTextField
         variant="outlined"
         label="Buscar ToDo..."
